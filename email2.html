@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนวทางการแก้ปัญหาน้ำประปาสำหรับ {{ muni_name_thai }}</title>
+</head>
+<body style="background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; max-width: 600px; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: 'Sarabun', Arial, sans-serif; line-height: 1.6; color: #333333;">
+        <tr>
+            <td style="padding: 30px;">
+                
+                <p style="font-size: 16px;"><strong>เรียน ท่านนายก{{ muni_name_thai }}</strong></p>
+                
+                <p style="font-size: 16px;">ปัญหาความเดือดร้อนของพี่น้องประชาชนในเขต <strong>{{ muni_name_thai }}</strong> เรื่องน้ำประปาไหลอ่อนและท่อแตกรั่วบ่อยครั้ง มักมีสาเหตุหลักมาจากโครงสร้างท่อเดิมที่ไม่รองรับการขยายตัวของเมืองในปัจจุบัน</p>
+                
+                <p style="font-size: 16px;">ทางทีมวิศวกรของเราได้วิเคราะห์ข้อมูลจากระบบ AI และ GIS โดยใช้ข้อมูลหลังคาเรือนจำนวน <strong>{{ total_buildings }} หลัง</strong> ในพื้นที่ของท่าน เพื่อออกแบบโครงข่ายท่อประปาใหม่ที่มีประสิทธิภาพสูงสุด</p>
+                
+                <div style="text-align: center; margin: 25px 0;">
+                    <img src="https://pub-546610fad1204493994ba3560b76e293.r2.dev/TH_{{ muni_id }}_map.png" alt="แผนภูมิโครงข่ายประปา {{ muni_name_thai }}" style="width: 100%; max-width: 540px; height: auto; border: 1px solid #eeeeee; border-radius: 8px; display: block; margin: 0 auto;">
+                    <p style="font-size: 13px; color: #666666; margin-top: 10px;"><em>ภาพจำลอง: โครงข่ายท่อประปาหลัก (Main Spine) สำหรับ {{ muni_name_thai }}</em></p>
+                </div>
+
+                <p style="font-size: 16px;">
+                    จากการคำนวณเบื้องต้น แผนแม่บท (Master Plan) ครอบคลุมทั้งเขตพื้นที่ มีงบประมาณรวมอยู่ที่ประมาณ <strong>{{ "{:,.2f}".format(total_master_plan / 1000000) }} ล้านบาท</strong> 
+                    โดยประกอบด้วยท่อเมนหลัก {{ pipe_150_km }} กม. และท่อกระจายน้ำ {{ pipe_100_km }} กม.
+                </p>
+
+                <div style="background-color: #f8fbff; border-left: 4px solid #3498db; padding: 15px; margin: 25px 0; border-radius: 0 4px 4px 0;">
+                    <p style="color: #2c3e50; font-weight: bold; margin: 0; font-size: 16px;">
+                        ข้อเสนอแนะ: เพื่อการเริ่มต้นที่รวดเร็ว ท่านสามารถแยกดำเนินการ "โครงการระยะเร่งด่วน (Phase 1)" ในวงเงินก่อสร้างประมาณ <strong>{{ "{:,.2f}".format(phase_1_budget / 1000000) }} ล้านบาท</strong>
+                    </p>
+                    <p style="font-size: 14px; margin-top: 10px; color: #34495e;">
+                        *ซึ่งจะทำให้ค่าจ้างออกแบบ (4%) อยู่ที่ประมาณ {{ "{:,.0f}".format(design_fee) }} บาท ซึ่งไม่เกิน 500,000 บาท สามารถดำเนินการจัดซื้อจัดจ้างด้วย <strong>"วิธีเฉพาะเจาะจง"</strong> ได้ทันที เพื่อความรวดเร็วในการแก้ปัญหาให้ประชาชน
+                    </p>
+                </div>
+                
+                <p style="font-size: 16px;">ท่านสามารถตรวจสอบรายละเอียดงบประมาณ (BOQ) และดาวน์โหลดแผนผังฉบับสมบูรณ์ได้ที่นี่:</p>
+                
+                <div style="text-align: center; margin: 35px 0;">
+                    <a href="https://attakanx1.github.io/Water_project/?id=TH_{{ muni_id }}" style="background-color: #27ae60; color: #ffffff; padding: 18px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 18px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        เปิดดูแผนแม่บทและงบประมาณ (Full Report)
+                    </a>
+                </div>
+                
+                <p style="font-size: 16px;">หากท่านสนใจข้อมูลเพิ่มเติม ทีมวิศวกรของเราพร้อมเข้าพบเพื่อนำเสนอรายละเอียดเชิงลึกและปรับจูนแผนงานให้สอดคล้องกับงบประมาณของเทศบาลครับ</p>
+                
+                <p style="font-size: 16px; margin-bottom: 0;">ขอแสดงความนับถือ,<br>
+                <strong>ทีมวิศวกรโครงสร้างพื้นฐานดิจิทัล</strong><br>
+                [ชื่อบริษัทของคุณ]</p>
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
