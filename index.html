@@ -71,7 +71,7 @@
                 </div>
                 <div class="mt-4">
                     <p class="text-xs text-slate-400 uppercase tracking-widest font-bold mb-1">งบประมาณก่อสร้างของท่าน</p>
-                    <p class="text-5xl font-extrabold text-slate-800 my-2 tracking-tight"><span id="display-budget" class="text-blue-600">-</span> <span class="text-2xl text-slate-500 font-medium">ล้านบาท</span></p>
+                    <p class="text-5xl font-extrabold text-slate-800 my-2 tracking-tight"><span id="display-budget">-</span> <span class="text-2xl text-slate-500 font-medium">ล้านบาท</span></p>
                     <p class="text-sm text-emerald-600 font-medium bg-emerald-50 px-3 py-1 rounded-full inline-block mt-2">
                         <i class="ph-bold ph-check mr-1"></i> ค่าออกแบบ 4% แบ่งเฟสได้
                     </p>
@@ -105,7 +105,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">ปัญหาเดิมๆ ที่ทำให้งบประมาณบานปลาย</h2>
                 <p class="text-lg text-slate-500">ท่านกำลังเจอกับวงจรปัญหาเหล่านี้อยู่หรือไม่?</p>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                     <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -132,239 +131,6 @@
         </div>
     </section>
 
-    <section id="solutions" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <span class="text-blue-600 font-bold tracking-widest uppercase text-xs bg-blue-100 px-3 py-1 rounded-full">ทางออกของเรา</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">ปฏิวัติการออกแบบด้วย "หลักวิศวกรรม"</h2>
-                <p class="text-lg text-slate-500 max-w-2xl mx-auto">เราเปลี่ยนการออกแบบระบบประปาแบบเดิม ให้เป็นงานที่ถูกต้องและเพิ่มประสิทธิภาพได้จริง</p>
-            </div>
-
-            <div class="space-y-16 relative">
-                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                    <div class="flex-1 md:text-right">
-                        <div class="md:hidden w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-500/30">1</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">ออกแบบด้วยช่างสำรวจมืออาชีพ</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">
-                            ใช้ข้อมูลถนนและหลังคาเรือนจริงจาก GIS เพื่อวางแผนการสำรวจให้แม่นยำ เทียบกับการลงพื้นที่สำรวจจริง หมดกังวลเรื่องการตกหล่นของชุมชนที่ขยายตัวใหม่
-                        </p>
-                    </div>
-                    <div class="hidden md:flex flex-col items-center justify-center w-16">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/30 z-10">1</div>
-                        <div class="h-32 w-0.5 bg-blue-200 mt-4"></div>
-                    </div>
-                    <div class="flex-1 w-full">
-                        <img src="photo/รูปสำรวจ.jpeg" alt="งานสำรวจ" class="rounded-3xl shadow-xl w-full object-cover h-72 border-4 border-white" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=GIS+Mapping'">
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
-                    <div class="flex-1">
-                        <div class="md:hidden w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-500/30">2</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">จำลองโครงข่ายด้วยซอฟต์แวร์ระดับโลก</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">
-                            ใช้ซอฟต์แวร์ <strong>EPANET</strong> ออกแบบให้แรงดันน้ำสูงเพียงพอทั่วถึงทุกบ้าน ลดปัญหาน้ำขัง พร้อมประเมินอัตราใช้น้ำ ป้องกันปัญหาน้ำไม่พอในอีก 20 ปีข้างหน้า
-                        </p>
-                    </div>
-                    <div class="hidden md:flex flex-col items-center justify-center w-16">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/30 z-10">2</div>
-                        <div class="h-32 w-0.5 bg-blue-200 mt-4"></div>
-                    </div>
-                    <div class="flex-1 w-full">
-                        <img src="photo/epanet.jpeg" alt="EPANET" class="rounded-3xl shadow-xl w-full object-cover h-72 border-4 border-white" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=Software+Simulation'">
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                    <div class="flex-1 md:text-right">
-                        <div class="md:hidden w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-500/30">3</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">จัดทำแบบก่อสร้างและ BOQ แม่นยำ</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">
-                            จัดทำแบบก่อสร้าง (Drawings) ที่แม่นยำ พร้อมรายการประมาณราคา (BOQ) ตามจริง ช่วยลดงบส่วนเกินได้ 15% และร่างขอบเขตงาน (TOR) สำหรับจัดจ้างได้ทันที
-                        </p>
-                    </div>
-                    <div class="hidden md:flex flex-col items-center justify-center w-16">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/30 z-10">3</div>
-                        <div class="h-32 w-0.5 bg-blue-200 mt-4"></div>
-                    </div>
-                    <div class="flex-1 w-full">
-                        <img src="photo/เขียนแบบ.jpeg" alt="BOQ" class="rounded-3xl shadow-xl w-full object-cover h-72 border-4 border-white" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=BOQ+%26+Drawings'">
-                    </div>
-                </div>
-                     
-                <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
-                    <div class="flex-1">
-                        <div class="md:hidden w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-500/30">4</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4">ออกแบบตามมาตรฐานวิศวกรรม</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">
-                            เราออกแบบตามมาตรฐานวิศวกรรมประปา ทั้งระบบท่อและอุปกรณ์สำคัญ เพื่อเพิ่มประสิทธิภาพการจ่ายน้ำ และลดปัญหาที่มักจะเกิดขึ้น เช่น น้ำขุ่น หรือแรงดันตก
-                        </p>
-                    </div>
-                    <div class="hidden md:flex flex-col items-center justify-center w-16">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/30 z-10"><i class="ph-bold ph-check"></i></div>
-                    </div>
-                    <div class="flex-1 w-full">
-                        <img src="photo/Engineering_design.jpg" alt="มาตรฐานวิศวกรรม" class="rounded-3xl shadow-xl w-full object-cover h-72 border-4 border-white object-bottom" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=Engineering+Standard'">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-emerald-600 font-bold tracking-widest uppercase text-xs bg-emerald-50 px-3 py-1 rounded-full">ความไว้วางใจ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-4">ผลงานที่ผ่านมาของเรา</h2>
-                <p class="text-lg text-slate-500">ส่วนหนึ่งของโครงการที่เราได้ส่งมอบความสำเร็จ</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto grid gap-4">
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-map-pin text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ออกแบบโครงข่ายท่อประปา <span class="text-slate-800">"โครงการขยายเขตท่อจ่ายน้ำประปา (ระยะที่ 1) ภายในเขตเทศบาลตำบลสว่างวัฒนา หมู่ 5 และหมู่ 15"</span> อำเภอศรีเทพ จังหวัดเพชรบูรณ์</p>
-                </div>
-                
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-buildings text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ออกแบบ <span class="text-slate-800">"โครงการก่อสร้างระบบผลิตน้ำประปา (ระบบสูบน้ำดิบ)"</span> เทศบาลตำบลสว่างวัฒนา อำเภอศรีเทพ จังหวัดเพชรบูรณ์</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-map-pin text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ออกแบบโครงข่ายท่อประปา <span class="text-slate-800">"โครงการขยายเขตท่อจ่ายน้ำประปา (ระยะที่ 2) ภายในเขตเทศบาลตำบลสว่างวัฒนา หมู่ 2 และหมู่ 4 ตำบลสระกรวด"</span> อำเภอศรีเทพ จังหวัดเพชรบูรณ์</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-drop text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ออกแบบโครงข่ายท่อประปา <span class="text-slate-800">"งานวางท่อน้ำประปา หมู่ 1 บ้านนาดี และ หมู่ 2 บ้านนาหนองทุ่ม"</span> พื้นที่องค์การบริหารส่วนตำบลนาดี อำเภอด่านซ้าย จังหวัดเลย</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-magnifying-glass text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">สำรวจและวิเคราะห์ระบบประปา <span class="text-slate-800">"เทศบาลเมืองท่าบ่อ อำเภอท่าบ่อ จังหวัดหนองคาย"</span> เพื่อวางแผนงบประมาณพัฒนาระบบประปา</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-blue-500">
-                        <i class="ph-fill ph-magnifying-glass text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">สำรวจและวิเคราะห์ระบบประปา <span class="text-slate-800">"องค์การบริหารส่วนตำบลเข็กน้อย อำเภอเขาค้อ จังหวัดเพชรบูรณ์"</span> เพื่อวางแผนงบประมาณพัฒนาระบบประปา</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-purple-50 border border-slate-100 hover:border-purple-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-purple-500">
-                        <i class="ph-fill ph-chalkboard-teacher text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ให้ความรู้แก่บุคลากร อปท. ร่วมกับการประปานครหลวง ในหลักสูตร <span class="text-slate-800">"เทคนิคมาตรฐานการวางท่อ ซ่อมบำรุง และจัดการน้ำสูญเสียฯ"</span> รุ่นที่ 1/2569 ณ จังหวัดนครราชสีมา</p>
-                </div>
-
-                <div class="bg-slate-50 hover:bg-purple-50 border border-slate-100 hover:border-purple-100 p-5 rounded-2xl flex items-start gap-4 transition-colors duration-300">
-                    <div class="mt-1 bg-white shadow-sm p-2 rounded-xl text-purple-500">
-                        <i class="ph-fill ph-chalkboard-teacher text-xl"></i>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed font-medium">ให้ความรู้แก่บุคลากร อปท. ร่วมกับการประปานครหลวง ในหลักสูตร <span class="text-slate-800">"เทคนิคมาตรฐานการวางท่อ ซ่อมบำรุง และจัดการน้ำสูญเสียฯ"</span> รุ่นที่ 2/2569 ณ จังหวัดระยอง</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 gradient-bg relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-block bg-yellow-400 text-yellow-900 font-bold px-5 py-2 rounded-full mb-8 text-sm tracking-widest shadow-xl shadow-yellow-500/20 uppercase">
-                <i class="ph-bold ph-bell-ringing mr-1"></i> ข่าวดีสำหรับหน่วยงานของท่าน!
-            </div>
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-md">เรามีโครงร่างโครงข่ายท่อประปา<br>และประมาณการงบประมาณแล้ว</h2>
-            <p class="text-xl text-blue-100 mb-10 leading-relaxed font-light">
-                รอเพียงท่านพิจารณาและนัดพูดคุยรายละเอียด สามารถดำเนินการจัดจ้างได้ทันที
-            </p>
-            
-            <button onclick="openModal('โครงข่ายท่อประปา')" class="bg-white hover:bg-blue-50 text-slate-900 px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 shadow-2xl flex items-center justify-center gap-3 transform hover:-translate-y-1 mx-auto border border-white/20">
-                <i class="ph-fill ph-file-pdf text-3xl text-red-500"></i> ดาวน์โหลดเอกสารโครงข่ายท่อและงบประมาณ
-            </button>
-        </div>
-    </section>
-
-    <section id="services" class="py-24 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-bold tracking-widest uppercase text-xs bg-blue-100 px-3 py-1 rounded-full">ระบบซอฟต์แวร์</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4">บริการเพิ่มเติมเพื่อการจัดการที่ยั่งยืน</h2>
-            </div>
-            
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                        <i class="ph-fill ph-desktop text-3xl text-blue-600"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">ระบบ MyWaterPro</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">ระบบเฝ้าระวัง (Monitor) พร้อมควบคุม (Control) เครื่องสูบน้ำและปริมาณน้ำหอถังสูง รายงานปริมาณน้ำประปาที่ส่งจ่ายในแต่ละวัน รวมทั้งตรวจสอบอัตราการใช้ไฟฟ้าของเครื่องสูบน้ำอย่างแม่นยำ</p>
-                    </div>
-                </div>
-                
-                <div class="my-10 border-t border-slate-100"></div>
-                
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm border border-emerald-100">
-                        <i class="ph-fill ph-drop-half text-3xl text-emerald-600"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-3">ระบบจัดการน้ำสูญเสีย (Water Loss)</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">เปลี่ยนน้ำที่ไหลทิ้งหรือสูญหายในระบบให้กลับมาเป็นรายได้เข้าสู่องค์กรของท่านอย่างเป็นรูปธรรม ด้วยหลักการทางวิศวกรรมที่สามารถวัดผลได้</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-slate-900 pt-24 pb-12 text-white border-t-8 border-blue-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20 bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">พร้อมเริ่มงานวันนี้ เพื่อความสุขของประชาชน</h2>
-                <p class="text-lg text-slate-400 mb-10 font-light">อย่าปล่อยให้ปัญหาน้ำประปาเป็นอุปสรรคต่อการพัฒนาพื้นที่<br>ทีมวิศวกรของเราพร้อมลงพื้นที่สำรวจและวิเคราะห์ข้อมูลให้ท่านทันที</p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:0909491429" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2 hover:-translate-y-1">
-                        <i class="ph-fill ph-phone-call text-2xl"></i> โทรปรึกษาวิศวกรฟรี
-                    </a>
-                    <button onclick="openModal('ข้อมูลติดต่อกลับ')" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 hover:-translate-y-1">
-                        <i class="ph-fill ph-envelope text-2xl"></i> ให้เราติดต่อกลับ
-                    </button>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 border-t border-slate-800 pt-12 items-center">
-                <div>
-                    <p class="text-slate-400 leading-relaxed">บริษัท โฟลวแพลน จำกัด<br>ผู้เชี่ยวชาญด้านงานวิศวกรรมประปา และการบริหารจัดการน้ำอย่างยั่งยืน</p>
-                </div>
-                
-                <div class="space-y-4 md:text-right flex flex-col md:items-end">
-                    <div class="font-bold text-lg text-white mb-2">ช่องทางการติดต่อ</div>
-                    <a href="tel:0909491429" class="text-slate-400 hover:text-white transition-colors flex items-center justify-end gap-2"><i class="ph-fill ph-phone text-xl text-blue-500"></i> 090 949 1429, 090 992 3961</a>
-                    <a href="mailto:engineer@flowplan.in.th" class="text-slate-400 hover:text-white transition-colors flex items-center justify-end gap-2"><i class="ph-fill ph-envelope text-xl text-blue-500"></i> engineer@flowplan.in.th</a>
-                    <a href="https://lin.ee/Pzi0C1Q" class="text-slate-400 hover:text-white transition-colors flex items-center justify-end gap-2"><i class="ph-fill ph-chat-circle-text text-xl text-green-500"></i> LINE Official: @FlowPlan</a>
-                    <img src="photo/IMG_2118.png" alt="QR Code" class="w-24 rounded-xl mt-4 opacity-90 hover:opacity-100 transition-opacity border border-slate-700" onerror="this.src='https://placehold.co/100x100/e2e8f0/475569?text=LINE+QR'">
-                </div>
-            </div>
-            
-            <div class="text-center text-slate-500 text-sm mt-16 pb-4">
-                &copy; 2026 FlowPlan Co., Ltd. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
     <div id="leadModal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="modalOverlay" onclick="closeModal()"></div>
 
@@ -372,7 +138,7 @@
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
                 <div id="modalContent" class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg opacity-0 translate-y-8 sm:scale-95">
                     
-                    <button onclick="closeModal()" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20 p-2 focus:outline-none rounded-full">
+                    <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20 p-2 focus:outline-none border-none bg-transparent">
                         <i class="ph-bold ph-x text-2xl"></i>
                     </button>
 
@@ -429,18 +195,16 @@
     </div>
 
     <script>
+        // Data loading logic stays the same...
         document.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
             let rawId = urlParams.get('id'); 
             let dlaId = "";
-            
             if (rawId && rawId.startsWith("TH_")) {
                 dlaId = rawId.replace("TH_", "");
             }
-
             if (dlaId) {
                 document.getElementById('dlaIdInput').value = dlaId;
-                
                 fetch('data.json')
                     .then(response => response.json())
                     .then(data => {
@@ -448,13 +212,10 @@
                             const thesabanName = data[dlaId].name;
                             const budgetRaw = parseFloat(data[dlaId].budget.replace(/,/g, ''));
                             const budgetInMillion = (budgetRaw / 1000000).toFixed(2);
-                            
                             document.getElementById('page-title').innerText = `โครงการประปา ${thesabanName} | FlowPlan`;
                             document.getElementById('display-pill-name').innerText = thesabanName;
-                            
                             const shortName = thesabanName.replace("องค์การบริหารส่วนตำบล", "").replace("เทศบาลตำบล", "").replace("เทศบาลเมือง", "");
                             document.getElementById('display-hero-name').innerText = shortName;
-                            
                             document.getElementById('display-budget').innerText = budgetInMillion;
                         }
                     })
@@ -499,8 +260,8 @@
             }, 5000);
         }
 
-        // แก้ไข 3: ระบบส่งข้อมูลไปยัง Google Sheets
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxb5_QlOg94wboL8V_hGz7OzHRtV_eVrReveKA2qtdbQPYfYJK_m6iY3btzFd48kY75Zw/exec';
+        // แก้ไข 3: อัปเดต URL และสคริปต์ส่งข้อมูลให้สมบูรณ์
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwrW3E2qd8JKeDxrmnyeq2wp0th0sFr9OX2YDZFikmFybGBB7Vo4kJrxB8w47KfSziaGg/exec';
 
         function submitForm(event) {
             event.preventDefault(); 
@@ -509,31 +270,32 @@
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
             
-            // เปลี่ยนปุ่มเป็นสถานะกำลังส่งข้อมูล (Loading State)
             submitBtn.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-xl"></i> กำลังส่งข้อมูล...';
             submitBtn.disabled = true;
 
-            // ดึงข้อมูลทั้งหมดจาก Form
+            // แปลงข้อมูลเป็น URLSearchParams เพื่อให้ GAS รับค่าผ่าน e.parameter ได้ง่ายที่สุด
             const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
             
-            // ส่งข้อมูลไปยัง Google Apps Script
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => {
-                    console.log('Success!', response);
-                    closeModal();
-                    showSuccessToast();
-                    
-                    // คืนค่าปุ่มกลับมาเหมือนเดิม
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    alert('เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้งครับ');
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                });
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: data,
+                mode: 'no-cors' // แก้ไขปัญหา CORS
+            })
+            .then(() => {
+                // เนื่องจากเป็น no-cors เบราว์เซอร์จะไม่สามารถอ่าน response ได้ แต่ข้อมูลจะเข้า Sheet ปกติ
+                closeModal();
+                showSuccessToast();
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหมีกครั้งครับ');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
         }
     </script>
 </body>
