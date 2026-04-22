@@ -365,15 +365,15 @@
         </div>
     </footer>
 
-<div id="leadModal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div id="leadModal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0" id="modalOverlay" onclick="closeModal()"></div>
 
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
                 <div id="modalContent" class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg opacity-0 translate-y-8 sm:scale-95">
                     
-                    <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-white/80 hover:text-white bg-transparent hover:bg-white/20 transition-all z-20 rounded-full focus:outline-none">
-                        <i class="ph-bold ph-x text-xl"></i>
+                    <button onclick="closeModal()" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-20 p-2 focus:outline-none rounded-full">
+                        <i class="ph-bold ph-x text-2xl"></i>
                     </button>
 
                     <div class="bg-gradient-to-br from-blue-600 to-blue-700 px-6 py-10 sm:px-10 text-center relative overflow-hidden">
@@ -391,17 +391,17 @@
                         
                         <div>
                             <label for="fullName" class="block text-sm font-medium text-slate-700 mb-1.5">ชื่อ-นามสกุลผู้ติดต่อ <span class="text-red-500">*</span></label>
-                            <input type="text" id="fullName" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="นาย ช่างประปา ใจดี">
+                            <input type="text" id="fullName" name="fullName" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="นาย ช่างประปา ใจดี">
                         </div>
 
                         <div>
                             <label for="phone" class="block text-sm font-medium text-slate-700 mb-1.5">เบอร์โทรศัพท์มือถือ <span class="text-red-500">*</span></label>
-                            <input type="tel" id="phone" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="09X-XXX-XXXX">
+                            <input type="tel" id="phone" name="phone" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="09X-XXX-XXXX">
                         </div>
 
                         <div>
                             <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">อีเมล <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="your@email.com">
+                            <input type="email" id="email" name="email" required class="glass-input w-full px-4 py-3.5 rounded-xl border border-slate-200 outline-none transition-all bg-white text-slate-800 placeholder-slate-400" placeholder="your@email.com">
                         </div>
 
                         <div class="pt-4">
@@ -467,7 +467,6 @@
         const modalContent = document.getElementById('modalContent');
         const docTitle = document.getElementById('modal-title');
         const hiddenInput = document.getElementById('requestedDocument');
-        const form = document.getElementById('downloadForm');
         const toast = document.getElementById('successToast');
 
         function openModal(documentName) {
@@ -488,7 +487,7 @@
             modalContent.classList.add('opacity-0', 'translate-y-8', 'sm:scale-95');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                form.reset();
+                document.getElementById('downloadForm').reset();
             }, 300);
             document.body.style.overflow = '';
         }
@@ -500,22 +499,41 @@
             }, 5000);
         }
 
+        // แก้ไข 3: ระบบส่งข้อมูลไปยัง Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxb5_QlOg94wboL8V_hGz7OzHRtV_eVrReveKA2qtdbQPYfYJK_m6iY3btzFd48kY75Zw/exec';
+
         function submitForm(event) {
             event.preventDefault(); 
             
-            const formData = {
-                dlaId: document.getElementById('dlaIdInput').value,
-                name: document.getElementById('fullName').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                requested: hiddenInput.value
-            };
+            const form = document.getElementById('downloadForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
             
-            console.log("Lead captured:", formData);
-            // TODO: ส่งข้อมูล formData ไปยัง Database
+            // เปลี่ยนปุ่มเป็นสถานะกำลังส่งข้อมูล (Loading State)
+            submitBtn.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-xl"></i> กำลังส่งข้อมูล...';
+            submitBtn.disabled = true;
+
+            // ดึงข้อมูลทั้งหมดจาก Form
+            const formData = new FormData(form);
             
-            closeModal();
-            showSuccessToast();
+            // ส่งข้อมูลไปยัง Google Apps Script
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    console.log('Success!', response);
+                    closeModal();
+                    showSuccessToast();
+                    
+                    // คืนค่าปุ่มกลับมาเหมือนเดิม
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้งครับ');
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
         }
     </script>
 </body>
